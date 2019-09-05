@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchTableViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="LastMusicSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Us-pJX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tfTextDidChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="bLJ-xb-EDt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4iK-pM-Xr0"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-w6-FeY">
+                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zC3-Xj-VO4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fgc-p4-j9C"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QpT-Us-pJX" secondAttribute="trailing" id="327-ce-tWl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Ra-w6-FeY" secondAttribute="trailing" id="N0g-cA-4l1"/>
+                            <constraint firstItem="6Ra-w6-FeY" firstAttribute="top" secondItem="QpT-Us-pJX" secondAttribute="bottom" id="QeG-bS-BI4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Ra-w6-FeY" secondAttribute="bottom" id="Rb4-wK-OTk"/>
+                            <constraint firstItem="QpT-Us-pJX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TZG-FA-qjo"/>
+                            <constraint firstItem="6Ra-w6-FeY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eP2-86-cB2"/>
+                            <constraint firstItem="QpT-Us-pJX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hGP-V6-BsU"/>
+                            <constraint firstItem="QpT-Us-pJX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="uSj-lB-Drk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="MaintableView" destination="6Ra-w6-FeY" id="GjT-8I-xTg"/>
+                        <outlet property="textField" destination="QpT-Us-pJX" id="1Sk-hG-NMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
